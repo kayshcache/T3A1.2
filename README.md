@@ -14,7 +14,7 @@ Data manipulation is highly effective using SQL queries with relational database
 
 An example of complex INNER JOIN command can be seen below in this SELECT statement, it joins all books with their authors and publisher information found in a relational database:
 ```sql
-SELECT Books.BookID, Authors.AuthorName, Publishers.PublisherName FROM (
-  (Books INNER JOIN Authors ON Books.AuthorID = Authors.AuthorID)
+SELECT Books.BookID, Authors.AuthorName, Publishers.PublisherName FROM ((Books
+  INNER JOIN Authors ON Books.AuthorID = Authors.AuthorID)
   INNER JOIN Publishers ON Books.PublisherID = Publisher.PublisherID);
 ```
