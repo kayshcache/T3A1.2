@@ -13,7 +13,9 @@ The function of three operators provided by SQL operations for the definition an
 Data manipulation is highly effective using SQL queries with relational databases via the use of a "JOIN". When retrieving data from multiple tables in a relational database, the INNER JOIN query can be used to manipulation the data returned by (for example) the SELECT statement. The INNER JOIN command retrieves data from multiple tables matching values in both tables. By using the INNER JOIN keyword it's possible to select all records from multiple tables when there is matching ID or primary key fields between them. A condition of there being records in a "Books" table that doesn't have matches in a corresponding "Authors" table won't show any of those unmatching records.
 
 An example of complex INNER JOIN command can be seen below in this SELECT statement, it joins all books with their authors and publisher information found in a relational database:
-<code>SELECT Books.BookID, Authors.AuthorName, Publishers.PublisherName
+```sql
+SELECT Books.BookID, Authors.AuthorName, Publishers.PublisherName
 FROM ((Books
 INNER JOIN Authors ON Books.AuthorID = Authors.AuthorID)
-INNER JOIN Publishers ON Books.PublisherID = Publisher.PublisherID);</code>
+INNER JOIN Publishers ON Books.PublisherID = Publisher.PublisherID);
+```
